@@ -6,16 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>보낼 페이지</title>
   <script>
-    var grade=5
-    localStorage.setItem('grade',grade);
-    
+    function pass(event) {
+      event.preventDefault();
+      var value = document.querySelector('input[name="input"]').value;
+      localStorage.setItem('grade', value);
+      window.location.href = "index2.html";
+    }
   </script>
 </head>
 
 <body>
-  <a href="https://baenol123.github.io/test/index2.html">
-  <button >클릭</button>
-  </a>
+  <input type="text" name="input"> <input type="submit"><br>
+  <button onclick="pass(event)">클릭</button>
 </body>
 
 </html>
